@@ -55,21 +55,25 @@ public class Report extends AppCompatActivity implements DatePickerDialog.OnDate
 
             }
         });
+
         submit.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-
-                String filename = "test.txt";
-                String fileContents = id + "," + s + "," + size.getText().toString() + "," + date.getText().toString() + "," + latitude.getText().toString() + "," + longitude.getText().toString() + "\n";
-                id++;
-                FileOutputStream outputStream;
-                try {
-                    outputStream = openFileOutput(filename, Context.MODE_APPEND);
-                    outputStream.write(fileContents.getBytes());
-                    outputStream.close();
-                    finish();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                if (isValid(Double.parseDouble(latitude.getText().toString()),Double.parseDouble(longitude.getText().toString()))){
+                    String filename = "test.txt";
+                    String fileContents = id + "," + s + "," + size.getText().toString() + "," + date.getText().toString() + "," + latitude.getText().toString() + "," + longitude.getText().toString() + "\n";
+                    id++;
+                    FileOutputStream outputStream;
+                    try {
+                        outputStream = openFileOutput(filename, Context.MODE_APPEND);
+                        outputStream.write(fileContents.getBytes());
+                        outputStream.close();
+                        finish();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }else {
+                    Toast.makeText(getBaseContext(), "Wrong input for latitude or longitude", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -81,7 +85,14 @@ public class Report extends AppCompatActivity implements DatePickerDialog.OnDate
         });
 
     }
-
+    public boolean isValid(double lat, double lng){
+        if(lat < -90 || lat > 90) {
+            return false;
+        } else if(lng < -180 || lng > 180) {
+            return false;
+        }
+        return true;
+    }
     public void showDatePickerDialog(){
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, this,
                 Calendar.getInstance().get(Calendar.YEAR),
@@ -96,7 +107,5 @@ public class Report extends AppCompatActivity implements DatePickerDialog.OnDate
         String d = (month+1) + "/" + dayOfMonth + "/" + year;
         date.setText(d);
 }
-
-
 
 }
