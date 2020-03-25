@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fire App</string>
+
+    <string-array name="status">
+        <item>Under Control</item>
+        <item>Being Held</item>
+        <item>Out of Control</item>
+    </string-array>
+</resources>
