@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Map_test1</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+    <string-array name="status">
+        <item>Under Control</item>
+        <item>Being Held</item>
+        <item>Out of Control</item>
+    </string-array>
+</resources>
