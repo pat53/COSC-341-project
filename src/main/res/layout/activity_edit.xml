@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit">
+
+    <TextView
+        android:id="@+id/location4"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:text="Location"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/name4"
+        app:layout_constraintTop_toBottomOf="@+id/name4" />
+
+    <TextView
+        android:id="@+id/name4"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/location2"
+        app:layout_constraintTop_toBottomOf="@+id/location2" />
+
+    <Button
+        android:id="@+id/delete4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Delete"
+        app:layout_constraintStart_toStartOf="@+id/edit4"
+        app:layout_constraintTop_toTopOf="@+id/location4" />
+
+    <Button
+        android:id="@+id/edit4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name4"
+        app:layout_constraintTop_toTopOf="@+id/name4" />
+
+    <TextView
+        android:id="@+id/location2"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:text="Location"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/name2"
+        app:layout_constraintTop_toBottomOf="@+id/name2" />
+
+    <Button
+        android:id="@+id/delete2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Delete"
+        app:layout_constraintStart_toStartOf="@+id/edit2"
+        app:layout_constraintTop_toTopOf="@+id/location2" />
+
+    <Button
+        android:id="@+id/edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name2"
+        app:layout_constraintTop_toTopOf="@+id/name2" />
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/location1"
+        app:layout_constraintTop_toBottomOf="@+id/location1" />
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Name"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/location1"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:text="Location"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/name1"
+        app:layout_constraintTop_toBottomOf="@+id/name1" />
+
+    <Button
+        android:id="@+id/edit1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name1"
+        app:layout_constraintTop_toTopOf="@+id/name1" />
+
+    <Button
+        android:id="@+id/delete1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Delete"
+        app:layout_constraintStart_toStartOf="@+id/edit1"
+        app:layout_constraintTop_toBottomOf="@+id/name1" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="490dp"
+        android:text="Back"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Next"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:text="Home"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next" />
+</androidx.constraintlayout.widget.ConstraintLayout>
